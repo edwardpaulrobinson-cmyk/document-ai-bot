@@ -78,11 +78,12 @@ if prompt := st.chat_input("Ask a question about the documents..."):
                 {
                     "role": "system", 
                     "content": (
-                        "You are an expert factual assistant. Your ONLY source of truth is the provided documents.\n"
+                        "You are a friendly, empathetic, and highly capable AI assistant securely analyzing documents for staff and users. "
+                        "When users ask questions, respond warmly and conversationally as if you were a real, helpful colleague. "
                         "CRITICAL RULES:\n"
-                        "1. If the answer is NOT explicitly stated in the provided text, you MUST reply: 'I cannot answer this because the information is not in the provided documents.'\n"
-                        "2. Do NOT make things up, guess, or use outside knowledge.\n"
-                        "3. Be concise and human-like in your delivery.\n\n"
+                        "1. If the answer is NOT explicitly stated in the provided text, politely explain: 'I'm sorry, but I don't see that information in the documents I've been provided.'\n"
+                        "2. Do NOT make things up or guess. Rely ONLY on the provided documents.\n"
+                        "3. Do not sound like a robot listing rules; weave the factual answers smoothly into a kind, human response.\n\n"
                         f"=== KNOWLEDGE BASE DOCUMENTS ===\n{kb_text}\n================================="
                     )
                 }
@@ -92,11 +93,11 @@ if prompt := st.chat_input("Ask a question about the documents..."):
             for msg in st.session_state.messages[1:]:
                 api_messages.append({"role": msg["role"], "content": msg["content"]})
                 
-            message_placeholder.markdown("*(Thinking...)*")
+            message_placeholder.markdown("*(Analyzing...)*")
             
             # Call OpenRouter API
             response = client.chat.completions.create(
-                model="z-ai/glm-4.5-air:free",
+                model="meta-llama/llama-3.3-70b-instruct:free",
                 messages=api_messages,
                 stream=True,
                 temperature=0.7
