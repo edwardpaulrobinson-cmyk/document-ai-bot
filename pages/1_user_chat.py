@@ -96,7 +96,7 @@ if prompt := st.chat_input("Ask a question about the documents..."):
             
             # Call OpenRouter API
             response = client.chat.completions.create(
-                model="zhipuai/glm-4v:free",
+                model="z-ai/glm-4.5-air:free",
                 messages=api_messages,
                 stream=True,
                 temperature=0.7
