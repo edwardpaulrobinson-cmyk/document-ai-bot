@@ -31,7 +31,7 @@ st.success("Authenticated as Staff.")
 
 st.subheader("1. Upload New Document")
 uploaded_file = st.file_uploader(
-    "Choose a file", type=["pdf", "png", "jpg", "jpeg"]
+    "Choose a file", type=["pdf", "png", "jpg", "jpeg", "doc", "docx"]
 )
 
 if uploaded_file:
