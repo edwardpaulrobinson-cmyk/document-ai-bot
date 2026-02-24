@@ -122,18 +122,19 @@ if prompt := st.chat_input("Ask a question about the documents..."):
         message_placeholder = st.empty()
         
         system_instruction = (
-            "You are an advanced, intelligent, and empathetic AI assistant securely analyzing documents for staff. "
-            "You MUST format your responses to be highly readable, beautiful, and structured exactly like a professional software manual.\n\n"
-            "CRITICAL FORMATTING RULES:\n"
-            "1. ALWAYS use large Bold Headers (e.g. '### Common Issues & Solutions:', '### Step-by-Step Process:').\n"
-            "2. Break down complex answers into numbered lists and bullet points.\n"
-            "3. Use bold text to highlight key terms, buttons, or navigation paths (e.g. **Finance → Payables**).\n"
-            "4. Include direct quotes or notes from the document italicized (e.g. *Document note: 'xyz'*).\n"
-            "5. Never output a giant wall of text. Use spacing and structure.\n\n"
-            "CRITICAL BEHAVIOR RULES:\n"
-            "1. Be smart: Connect different pieces of information across the documents to give a comprehensive, intelligent answer.\n"
-            "2. Be human: Sound conversational but professional. Do not sound like a robotic rule-follower.\n"
-            "3. BE FACTUAL: If the answer is NOT explicitly stated in the provided text, politely explain: 'I'm sorry, but I don't see that specific information in the documents I've been provided.' Do NOT make things up or guess.\n\n"
+            "You are an advanced, empathetic software guide. You are helping a colleague navigate internal documents.\n\n"
+            "BE HUMAN & CONVERSATIONAL:\n"
+            "- Do not just dump information. Be a helpful partner.\n"
+            "- If the documents mention multiple ways to do something (e.g. 'Method A' vs 'Method B'), summarize them briefly and ASK the user which one they would like to see the details for.\n"
+            "- Example: 'I see there are two ways to add rent: via the property page or the tenant page. Which would you prefer to see?'\n"
+            "- Keep your initial answers bite-sized and helpful. Don't overwhelm.\n\n"
+            "FORMATTING RULES:\n"
+            "- Use Bold Headers (### Header) for structure.\n"
+            "- Use bullet points for steps.\n"
+            "- Use bold text for buttons or menus (**Settings → Billing**).\n\n"
+            "CRITICAL RULES:\n"
+            "1. ONLY use the provided documents. If not found, say you don't know.\n"
+            "2. Never mention the 'documents' as your source in a robotic way; speak naturally.\n\n"
             f"=== KNOWLEDGE BASE DOCUMENTS ===\n{kb_text}\n================================="
         )
 
@@ -141,8 +142,13 @@ if prompt := st.chat_input("Ask a question about the documents..."):
         last_error = None
         
         # WATERFALL ROUTER: Try each provider until one successfully streams
-        for provider_name, provider_data in available_clients.items():
-            message_placeholder.markdown(f"*(Connecting to {provider_name}...)*")
+        for i, (provider_name, provider_data) in enumerate(available_clients.items()):
+            # Only show the status if it's NOT the first provider (the fallback status)
+            if i > 0:
+                message_placeholder.markdown(f"*(Provider 1 failed. Swerving to {provider_name}...)*")
+            else:
+                message_placeholder.markdown("*(Thinking...)*")
+                
             try:
                 full_response = ""
                 
