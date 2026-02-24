@@ -25,7 +25,7 @@ if pg.url_path == "":
     st.title("🤖 Welcome to the AI Document Hub")
     st.markdown("This is the main hub. From here, you can navigate to different parts of the application using the sidebar on the left.")
 
-    # Create the knowledge base directory if it doesn't exist
+    # We now store files locally again because OpenRouter doesn't have a Cloud Storage API
     KB_DIR = "knowledge_base"
     if not os.path.exists(KB_DIR):
         os.makedirs(KB_DIR)
