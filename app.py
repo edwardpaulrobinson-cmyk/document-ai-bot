@@ -12,8 +12,6 @@ st.markdown("This is the main hub. From here, you can navigate to different part
 
 st.markdown("### 🧑‍💻 For Users")
 st.markdown("Click on **User Chat** in the sidebar to ask questions about the documents our staff have uploaded.")
-if st.button("Go to User Chat"):
-    st.switch_page("pages/1_user_chat.py")
 
 st.markdown("---")
 st.markdown("### 🛡️ For Staff")
