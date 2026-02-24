@@ -1,0 +1,67 @@
+[2024-02-11 01:03:48.090] [DISPLAY] [Main ] [main] Working directory: C:\Program Files\Rockstar Games\Launcher
+[2024-02-11 01:03:48.102] [DISPLAY] [Main ] [minmode] Running in Steam mode
+[2024-02-11 01:03:48.102] [DISPLAY] [Main ] [minmode] Steam App Id: 1174180
+[2024-02-11 01:03:48.102] [DISPLAY] [Main ] [minmode] Title Id: rdr2
+[2024-02-11 01:03:48.102] [DISPLAY] [Main ] [minmode] Location: C:\Program Files (x86)\Steam\steamapps\common\Red Dead Redemption 2
+[2024-02-11 01:03:48.103] [DISPLAY] [Main ] [launcher] Opening log file.
+[2024-02-11 01:03:48.103] [DISPLAY] [Main ] [main] Command line: "C:\Program Files\Rockstar Games\Launcher\Launcher.exe" -skipPatcherCheck -steamAppId=1174180 -steamLocation "C:\Program Files (x86)\Steam\steamapps\common\Red Dead Redemption 2" @args.txt
+[2024-02-11 01:03:48.103] [DISPLAY] [Main ] [main] P4 Version: 
+[2024-02-11 01:03:48.103] [DISPLAY] [Main ] [main] RGL Branch: release_15
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main] Version: 1.0.84.1856
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main] Parameters:
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     C:\Program Files\Rockstar Games\Launcher\Launcher.exe
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     -skipPatcherCheck
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     -steamAppId=1174180
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     -steamLocation
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     C:\Program Files (x86)\Steam\steamapps\common\Red Dead Redemption 2
+[2024-02-11 01:03:48.104] [DISPLAY] [Main ] [main]     @args.txt
+[2024-02-11 01:03:48.121] [DISPLAY] [Main ] [titlemanager] Could not get title list cache from disk; no titles known to be installed.
+[2024-02-11 01:03:48.121] [WARNING] [Main ] [titlemanager] RGL install location not set, using exe location: C:\Program Files\Rockstar Games\Launcher
+[2024-02-11 01:03:48.121] [DISPLAY] [Main ] [preqmanager] Could not get preq list from disk; no preqs known to be installed.
+[2024-02-11 01:03:48.164] [WARNING] [Main ] [settingsmanager] Couldn't read settings file C:\Users\edwar\AppData\Local\Rockstar Games\Launcher\settings_user.dat; using defaults.
+[2024-02-11 01:03:48.164] [WARNING] [Main ] [settingsmanager] Couldn't read settings file C:\ProgramData\Rockstar Games\Launcher\settings_machine.dat; using defaults.
+[2024-02-11 01:03:48.165] [DISPLAY] [Main ] [settingsmanager] No user language setting, defaulting to 'en-US'
+[2024-02-11 01:03:48.165] [DISPLAY] [Main ] [svc] Service version: 1.0.84.1856 (1.0.84.1856)
+[2024-02-11 01:03:48.171] [DISPLAY] [Main ] [main] Current environment (prod) different to previous launch (); updating environment setting
+[2024-02-11 01:03:48.272] [DISPLAY] [Main ] [fileutils] Version: 2.2.7.0 | 1.0.84.1856 | FFP
+[2024-02-11 01:03:48.650] [DISPLAY] [bgsvc] [svc] Received response from service.
+[2024-02-11 01:03:48.688] [DISPLAY] [net3 ] [title] Current version for title [pv] Launcher : 1.0.84.1856
+[2024-02-11 01:03:48.963] [DISPLAY] [Main ] [systemtray] System tray: enabled
+[2024-02-11 01:03:48.968] [DISPLAY] [Main ] [launcher] Passed check: majorVersion(10.0.22631) >= 10
+[2024-02-11 01:03:48.974] [DISPLAY] [Workr] [idownloader] Starting download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/launcher_online_config.xml'
+[2024-02-11 01:03:49.110] [DISPLAY] [Workr] [idownloader] Completed download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/launcher_online_config.xml' (status: 0/200)
+[2024-02-11 01:03:49.110] [DISPLAY] [Workr] [titlemanager] Downloading title list...
+[2024-02-11 01:03:49.116] [DISPLAY] [Workr] [idownloader] Starting download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/title_metadata.json'
+[2024-02-11 01:03:49.220] [DISPLAY] [Workr] [idownloader] Completed download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/title_metadata.json' (status: 0/200)
+[2024-02-11 01:03:49.269] [DISPLAY] [Workr] [titlemanager] Downloading default title list (SCS)...
+[2024-02-11 01:03:49.269] [DISPLAY] [Workr] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetDefaultApps?accessToken='
+[2024-02-11 01:03:50.691] [DISPLAY] [Workr] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetDefaultApps?accessToken=' (status: 0/200)
+[2024-02-11 01:03:50.691] [DISPLAY] [Workr] [titlemanager] Title list updated.
+[2024-02-11 01:03:50.691] [DISPLAY] [Workr] [launcher] Checking for self-update...
+[2024-02-11 01:03:50.696] [DISPLAY] [Workr] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetBuildManifestFullNoAuth?branchAccessToken=BRANCHACCESS token="VufeOQUuCmCCzSgYreAW1yiKn0llHqY6tfKlIFcJk3sGbDYsbTLLUp871ydO1IdU/syMU4R44t3g1yj5MQSYyA==",signature="199PvFqb7WOCiFKvIZ83/6x3Vn73FKR6FU9DRYtZCXU="'
+[2024-02-11 01:03:52.578] [DISPLAY] [Workr] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetBuildManifestFullNoAuth?branchAccessToken=BRANCHACCESS token="VufeOQUuCmCCzSgYreAW1yiKn0llHqY6tfKlIFcJk3sGbDYsbTLLUp871ydO1IdU/syMU4R44t3g1yj5MQSYyA==",signature="199PvFqb7WOCiFKvIZ83/6x3Vn73FKR6FU9DRYtZCXU="' (status: 0/200)
+[2024-02-11 01:03:52.583] [DISPLAY] [Workr] [statuschecker] Title Rockstar Games Launcher: 0.0 KB / 235.21 MB
+[2024-02-11 01:03:52.583] [DISPLAY] [Workr] [selfupdate] Updating launcher...
+[2024-02-11 01:03:54.571] [DISPLAY] [Admin] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/RetrieveFileChunkNoAuthMulti'
+[2024-02-11 01:03:55.986] [DISPLAY] [Admin] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/RetrieveFileChunkNoAuthMulti' (status: 0/200)
+[2024-02-11 01:04:08.465] [DISPLAY] [Workr] [downloadprogress] Dl: D|148600920|13|6|0|0
+[2024-02-11 01:04:08.472] [DISPLAY] [Workr] [titleupdater] Launcher needs to restart to be made up-to-date.
+[2024-02-11 01:04:08.472] [DISPLAY] [Workr] [titleupdater] Update of Rockstar Games Launcher succeeded; needs restart to complete.
+[2024-02-11 01:04:08.619] [DISPLAY] [Workr] [selfupdate] Applying downloaded self-update...
+[2024-02-11 01:04:08.620] [DISPLAY] [Workr] [fileutils] Unable to get file version info size for C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:08.620] [DISPLAY] [Workr] [title] Swap file for Rockstar Games Launcher not found during self update in C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:08.620] [DISPLAY] [Workr] [fileutils] Unable to get file version info size for C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:08.620] [DISPLAY] [Workr] [title] Updated version [mv] for title Rockstar Games Launcher : 1.0.84.1856
+[2024-02-11 01:04:08.719] [DISPLAY] [Workr] [title] Current version for title [pv] Rockstar Games Launcher : 1.0.84.1856
+[2024-02-11 01:04:09.300] [DISPLAY] [Workr] [fileutils] Unable to get file version info size for C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:09.300] [DISPLAY] [Workr] [title] Swap file for Rockstar Games Launcher not found during self update in C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:09.301] [DISPLAY] [Workr] [fileutils] Unable to get file version info size for C:\Program Files\Rockstar Games\Launcher\Launcher.exe.swap
+[2024-02-11 01:04:09.301] [DISPLAY] [Workr] [title] Updated version [mv] for title Rockstar Games Launcher : 1.0.84.1856
+[2024-02-11 01:04:09.301] [DISPLAY] [Workr] [selfupdate] Self-update applied, need to restart.
+[2024-02-11 01:04:09.302] [DISPLAY] [Workr] [launcher] Restarting to apply self-update...
+[2024-02-11 01:04:09.302] [DISPLAY] [Workr] [lifecycle] Setting to restart after exit.
+[2024-02-11 01:04:09.302] [DISPLAY] [Workr] [launcher] Shutdown requested! Forced: false
+[2024-02-11 01:04:09.302] [DISPLAY] [Workr] [launcher] Completed Social Club Pre-initialization tasks
+[2024-02-11 01:04:09.343] [DISPLAY] [Main ] [launcher] StartShutdown - Now in progress
+[2024-02-11 01:04:09.401] [DISPLAY] [Main ] [app] Application quit requested (exit code: 0)
+[2024-02-11 01:04:09.418] [DISPLAY] [Main ] [svc] Stopping the background service.

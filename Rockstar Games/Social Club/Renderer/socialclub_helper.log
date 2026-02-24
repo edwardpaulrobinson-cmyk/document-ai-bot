@@ -1,0 +1,28 @@
+[2024-02-11 01:07:54.204] [ 20924] [5294] ===================================
+[2024-02-11 01:07:54.204] [ 20924] [5294] Browser process opened from pid: 8540
+[2024-02-11 01:07:54.204] [ 20924] [5294] Language: en
+[2024-02-11 01:07:54.204] [ 20924] [5294] Connecting to IPC channel: rgsc_ipc_215c_channel_0
+[2024-02-11 01:07:54.206] [ 20924] [5294] Product version: RockstarGames/2.2.7.0/1.0.1491.18/rdr2/Steam
+[2024-02-11 01:07:54.275] [ 20924] [5294] OnChannelConnected - rgsc_ipc_215c_channel_0 (remoteProcessId 8540)
+[2024-02-11 01:07:55.785] [ 20924] [5294] Renderer[1][17016] IPC channel response: connect to 'rgsc_ipc_215c_channel_1'
+[2024-02-11 01:07:55.785] [ 20924] [5294] Renderer[1][17016] Connecting to IPC channel: rgsc_ipc_215c_channel_1
+[2024-02-11 01:07:55.797] [ 20924] [5294] Renderer[1][17016] OnChannelConnected - rgsc_ipc_215c_channel_1 (remoteProcessId 8540)
+[2024-02-11 01:46:29.630] [ 20924] [5294] OnChannelError() - rgsc_ipc_215c_channel_0
+[2024-02-11 01:46:29.631] [ 20924] [5294] Shutdown requested
+[2024-02-11 01:46:34.708] [ 20924] [5294] Timed out waiting for windows to close on shutdown
+[2024-02-11 01:46:34.724] [ 20924] [5294] MainMessageLoopInternalPump - Preparing to shutdown
+[2024-02-11 01:46:37.834] [ 20924] [5294] MainMessageLoopInternalPump - Shutdown
+[2024-02-11 20:46:57.673] [  2564] [4614] ===================================
+[2024-02-11 20:46:57.679] [  2564] [4614] Browser process opened from pid: 12040
+[2024-02-11 20:46:57.679] [  2564] [4614] Language: en
+[2024-02-11 20:46:57.679] [  2564] [4614] Connecting to IPC channel: rgsc_ipc_2f08_channel_0
+[2024-02-11 20:46:57.680] [  2564] [4614] Product version: RockstarGames/2.2.7.0/1.0.1491.18/rdr2/Steam
+[2024-02-11 20:46:57.732] [  2564] [4614] OnChannelConnected - rgsc_ipc_2f08_channel_0 (remoteProcessId 12040)
+[2024-02-11 20:46:59.077] [  2564] [4614] Renderer[1][4972] IPC channel response: connect to 'rgsc_ipc_2f08_channel_1'
+[2024-02-11 20:46:59.077] [  2564] [4614] Renderer[1][4972] Connecting to IPC channel: rgsc_ipc_2f08_channel_1
+[2024-02-11 20:46:59.115] [  2564] [4614] Renderer[1][4972] OnChannelConnected - rgsc_ipc_2f08_channel_1 (remoteProcessId 12040)
+[2024-02-11 21:47:21.574] [  2564] [4614] OnChannelError() - rgsc_ipc_2f08_channel_0
+[2024-02-11 21:47:21.578] [  2564] [4614] Shutdown requested
+[2024-02-11 21:47:26.623] [  2564] [4614] Timed out waiting for windows to close on shutdown
+[2024-02-11 21:47:26.639] [  2564] [4614] MainMessageLoopInternalPump - Preparing to shutdown
+[2024-02-11 21:47:29.747] [  2564] [4614] MainMessageLoopInternalPump - Shutdown

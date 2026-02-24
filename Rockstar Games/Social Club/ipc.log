@@ -1,0 +1,6 @@
+[0211/010416:WARNING:ipc_channel_win.cc(153)] failed to create pipe: 2
+[0211/010416:WARNING:ipc_channel_win.cc(46)] Unable to create pipe named "rgsc_launcher_0" in client mode.
+[0211/204605:WARNING:ipc_channel_win.cc(153)] failed to create pipe: 2
+[0211/204605:WARNING:ipc_channel_win.cc(46)] Unable to create pipe named "rgsc_launcher_0" in client mode.
+[1026/010923:WARNING:ipc_channel_win.cc(153)] failed to create pipe: 2
+[1026/010923:WARNING:ipc_channel_win.cc(46)] Unable to create pipe named "rgsc_launcher_0" in client mode.

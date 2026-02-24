@@ -1,0 +1,225 @@
+LocalPreferencesVersion "11"
+SkipIntroMovie "1"
+FirstTimeFlowCompleted "1"
+FirstTimeVisibilityFlowCompleted "1"
+SeenEternalCharacterWarning "0"
+MostRecentlySeenSeasonInfo "6"
+MostRecentlySeenHasExploredBPVoucher "0"
+DisplayModeFlags "0"
+DisplayModeWindowMode "1"
+DisplayModeWinLeft "0"
+DisplayModeWinTop "0"
+DisplayModeUIOptWidth "1920"
+DisplayModeUIOptHeight "1200"
+DisplayModeWidth "1920"
+DisplayModeHeight "1200"
+DisplayModeRefreshRate "165"
+DisplayModeColorSpace "0"
+DisplayModeMSAALevel "0"
+Monitor "0"
+HDRBlackPoint "0.000100"
+HDRWhitePoint "1000.000000"
+HDRBrightness "250.000000"
+SDRBrightness "1.000000"
+SDRLinearThreshold "0.500000"
+SDRHuePreserveRatio "0.660000"
+SDRExposureFactor "1.000000"
+Vsync "0"
+GpuCrashReportingMode "1"
+Adapter "0"
+DisableChromaEffects "0"
+ChromaticAberration "1"
+LockCursorInFullscreenWindowed "0"
+LimitForegroundFPS "1"
+MaxForegroundFPS "400"
+LimitBackgroundFPS "1"
+MaxBackgroundFPS "400"
+LimitCutsceneFPS "1"
+Sharpen "0.300000"
+SharpenFSR2 "4.500000"
+SharpenDLSS "0.500000"
+SharpenFSR "4.500000"
+SharpenXeSS "0.300000"
+HardwareClass "4"
+PCIVendor "4318"
+PCIDevice "10464"
+flSafeZoneLeft "0.000000"
+flSafeZoneTop "0.000000"
+FontScale "1"
+ColorBlindFilter "0"
+ColorBlindIntensity "1.000000"
+CursorScale "1"
+QualityPreset "0"
+TextureQuality "2"
+TextureFilterQuality "4"
+ShadowQuality "3"
+FogQuality "2"
+PhysicsQuality "2"
+ParticlesQuality "1.000000"
+ClutterQuality "4"
+FurQuality "2"
+GTAOQuality "4"
+AntialiasingQuality "1"
+WaterSimQuality "1"
+ShaderQuality "2"
+ReflectionQuality "1"
+GeoComplexity "2"
+HeightFieldGeometryDetail "1"
+LowFX "0"
+Reflections "1"
+OcclusionShapesQuality "2"
+Raytracing "1"
+RaytracedShadowsQuality "0"
+RaytracedReflectionsQuality "2"
+RaytracedFoliage "1"
+RaytracedParticles "1"
+Distortion "1"
+ResolutionScaling "3"
+DLSS "3"
+DLSSG "1"
+FSR "1"
+FSR2 "2"
+XeSS "2"
+Reflex "1"
+RenderResolutionScale "1.000000"
+DisableTrilinearFiltering "0"
+FullResReflections "0"
+SafeMode "0"
+DriverWarningIssued "0"
+ViewDistance "1"
+MasterVolume "0.990000"
+EffectVolume "0.100000"
+MusicVolume "0.160000"
+NarrationVolume "0.220000"
+AmbientVolume "1.000000"
+CinematicsVolume "1.000000"
+GlobalAmbientVolume "1.000000"
+ScreenReaderVolume "1.000000"
+NavAssistSonarVolume "1.000000"
+SoundDriver "0"
+AudioDevice "0"
+SpeakerMode "0"
+QuestSubtitlesEnabled "1"
+CinematicsSubtitlesMode "1"
+DialogSubtitlesMode "1"
+LorebookSubtitlesMode "1"
+PlayInBackground "0"
+MuteSound "0"
+MuteEffects "0"
+MuteAmbient "0"
+MuteVoice "0"
+MuteMusic "0"
+ItemDropSoundMaster "1"
+ItemDropSoundWeapons "1"
+ItemDropSoundArmor "1"
+ItemDropSoundJewelry "1"
+ItemDropSoundSocketable "1"
+ItemDropSoundOther "1"
+ItemDropSoundMinQuality "0"
+ItemAmbientSoundMaster "0"
+ItemAmbientSoundWeapons "0"
+ItemAmbientSoundArmor "0"
+ItemAmbientSoundJewelry "0"
+ItemAmbientSoundSocketable "0"
+ItemAmbientSoundOther "0"
+ItemAmbientSoundMinQuality "0"
+ItemDropHoverSound "0"
+TraversalAmbientSound "0"
+ChatAudioDucking "1"
+ChatAudioDuckingEnergy "0.000000"
+TextLocale "2"
+SoundLocale "2"
+PushToTalk1 "0"
+PushToTalk2 "1"
+VoiceAutoJoin1 "0"
+VoiceAutoJoin2 "0"
+VoiceOutputVolume1 "1.000000"
+VoiceOutputVolume2 "1.000000"
+MicVolume1 "1.000000"
+MicVolume2 "1.000000"
+VoiceOutputDevice1 "0"
+VoiceOutputDevice2 "0"
+MicDevice1 "0"
+MicDevice2 "0"
+PlayerErrorAudioMode "0"
+VoiceAutoDetectVoice "1"
+VoiceDetectSensitivity "43"
+AudioMasteringPreset "0"
+UseScreenReader "0"
+TranscribeVoiceChat "0"
+ScreenReaderPlaybackSpeed "0.000000"
+ScreenReaderVolume "1.000000"
+ScreenReaderVoice "1153246296"
+UseThirdPartyReader "0"
+UseReadTextOnHover "0"
+SubtitleCutsceneSize "0.000000"
+SubtitleDialogSize "0.000000"
+SubtitleLorebookSize "0.000000"
+SubtitleColorIndex "0"
+BackgroundOpacity "0.800000"
+UseTextToSpeech "0"
+TTSVoiceId "0"
+TTSPlaybackSpeed "1"
+EnableTTSChannelLocal "1"
+EnableTTSChannelParty "1"
+EnableTTSChannelTrade "1"
+EnableTTSChannelClan "1"
+EnableTTSChannelWhisper "1"
+EnableTTSLineBreaks "1"
+EnableTTSCharacterName "1"
+EnableTTSChannelName "1"
+EnableTTSItemName "1"
+EnableContrastCursor "0"
+EdgeLightColorEnabled "0"
+EdgeLightIntensity "0.500000"
+CharacterVisibilityMode "1"
+FilterFlags "-1"
+StreamerMode "0"
+PreviouslyEnabledStreamerMode "0"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

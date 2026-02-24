@@ -1,0 +1,42 @@
+[2024-02-11 01:04:16.434] [ 19136] [50EC] ===================================
+[2024-02-11 01:04:16.435] [ 19136] [50EC] Browser process opened from pid: 20756
+[2024-02-11 01:04:16.435] [ 19136] [50EC] Language: en
+[2024-02-11 01:04:16.435] [ 19136] [50EC] Connecting to IPC channel: rgsc_ipc_5114_channel_0
+[2024-02-11 01:04:16.436] [ 19136] [50EC] Product version: RockstarGames/2.2.7.0/1.0.84.1856/launcher/Steam
+[2024-02-11 01:04:16.488] [ 19136] [50EC] OnChannelConnected - rgsc_ipc_5114_channel_0 (remoteProcessId 20756)
+[2024-02-11 01:04:17.924] [ 19136] [50EC] Renderer[1][6568] IPC channel response: connect to 'rgsc_ipc_5114_channel_1'
+[2024-02-11 01:04:17.924] [ 19136] [50EC] Renderer[1][6568] Connecting to IPC channel: rgsc_ipc_5114_channel_1
+[2024-02-11 01:04:17.986] [ 19136] [50EC] Renderer[1][6568] OnChannelConnected - rgsc_ipc_5114_channel_1 (remoteProcessId 20756)
+[2024-02-11 01:46:43.845] [ 19136] [50EC] OnChannelError() - rgsc_ipc_5114_channel_0
+[2024-02-11 01:46:43.846] [ 19136] [50EC] Shutdown requested
+[2024-02-11 01:46:48.855] [ 19136] [50EC] Timed out waiting for windows to close on shutdown
+[2024-02-11 01:46:48.866] [ 19136] [50EC] MainMessageLoopInternalPump - Preparing to shutdown
+[2024-02-11 01:46:51.038] [ 19136] [50EC] MainMessageLoopInternalPump - Shutdown
+[2024-02-11 20:46:05.585] [ 19308] [4CE4] ===================================
+[2024-02-11 20:46:05.591] [ 19308] [4CE4] Browser process opened from pid: 1436
+[2024-02-11 20:46:05.591] [ 19308] [4CE4] Language: en
+[2024-02-11 20:46:05.591] [ 19308] [4CE4] Connecting to IPC channel: rgsc_ipc_59c_channel_0
+[2024-02-11 20:46:05.593] [ 19308] [4CE4] Product version: RockstarGames/2.2.7.0/1.0.84.1856/launcher/Steam
+[2024-02-11 20:46:05.773] [ 19308] [4CE4] OnChannelConnected - rgsc_ipc_59c_channel_0 (remoteProcessId 1436)
+[2024-02-11 20:46:07.621] [ 19308] [4CE4] Renderer[1][20376] IPC channel response: connect to 'rgsc_ipc_59c_channel_1'
+[2024-02-11 20:46:07.621] [ 19308] [4CE4] Renderer[1][20376] Connecting to IPC channel: rgsc_ipc_59c_channel_1
+[2024-02-11 20:46:07.669] [ 19308] [4CE4] Renderer[1][20376] OnChannelConnected - rgsc_ipc_59c_channel_1 (remoteProcessId 1436)
+[2024-02-11 21:47:36.702] [ 19308] [4CE4] OnChannelError() - rgsc_ipc_59c_channel_0
+[2024-02-11 21:47:36.702] [ 19308] [4CE4] Shutdown requested
+[2024-02-11 21:47:41.714] [ 19308] [4CE4] Timed out waiting for windows to close on shutdown
+[2024-02-11 21:47:41.729] [ 19308] [4CE4] MainMessageLoopInternalPump - Preparing to shutdown
+[2024-02-11 21:47:44.845] [ 19308] [4CE4] MainMessageLoopInternalPump - Shutdown
+[2024-10-26 01:09:23.573] [ 15280] [4CF4] ===================================
+[2024-10-26 01:09:23.579] [ 15280] [4CF4] Browser process opened from pid: 24432
+[2024-10-26 01:09:23.579] [ 15280] [4CF4] Language: en
+[2024-10-26 01:09:23.580] [ 15280] [4CF4] Connecting to IPC channel: rgsc_ipc_5f70_channel_0
+[2024-10-26 01:09:23.584] [ 15280] [4CF4] Product version: RockstarGames/2.2.7.0/1.0.84.1856/launcher/PC
+[2024-10-26 01:09:24.247] [ 15280] [4CF4] OnChannelConnected - rgsc_ipc_5f70_channel_0 (remoteProcessId 24432)
+[2024-10-26 01:09:28.215] [ 15280] [4CF4] Renderer[1][3244] IPC channel response: connect to 'rgsc_ipc_5f70_channel_1'
+[2024-10-26 01:09:28.215] [ 15280] [4CF4] Renderer[1][3244] Connecting to IPC channel: rgsc_ipc_5f70_channel_1
+[2024-10-26 01:09:28.308] [ 15280] [4CF4] Renderer[1][3244] OnChannelConnected - rgsc_ipc_5f70_channel_1 (remoteProcessId 24432)
+[2024-10-26 01:09:45.132] [ 15280] [4CF4] OnChannelError() - rgsc_ipc_5f70_channel_0
+[2024-10-26 01:09:45.132] [ 15280] [4CF4] Shutdown requested
+[2024-10-26 01:09:50.144] [ 15280] [4CF4] Timed out waiting for windows to close on shutdown
+[2024-10-26 01:09:50.175] [ 15280] [4CF4] MainMessageLoopInternalPump - Preparing to shutdown
+[2024-10-26 01:09:53.482] [ 15280] [4CF4] MainMessageLoopInternalPump - Shutdown
