@@ -75,7 +75,16 @@ st.subheader("2. Current Knowledge Base")
 
 with st.spinner("Fetching documents from Gemini..."):
     # List all files currently stored in Gemini
-    gemini_files = list(client.files.list())
+    gemini_files = []
+    try:
+        gemini_files = list(client.files.list())
+    except Exception as e:
+        if "400" in str(e) or "API_KEY_INVALID" in str(e) or "expired" in str(e).lower():
+            st.error("Your new API key is invalid or hasn't activated yet. Please check Google AI Studio.")
+        elif "429" in str(e):
+            st.error("Rate Limit Reached: Cannot fetch documents right now. Please wait 1 minute.")
+        else:
+            st.error(f"Error fetching documents: {e}")
 
 if not gemini_files:
     st.info("No documents uploaded yet.")
