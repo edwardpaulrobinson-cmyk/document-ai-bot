@@ -160,25 +160,18 @@ if prompt := st.chat_input("Ask a question about the documents..."):
                             full_response += chunk.choices[0].delta.content
                             message_placeholder.markdown(f"**[{provider_name}]**\n\n" + full_response + "▌")
 
-                # If loop finishes without raising a 429 Error, we succeeded!
+                # If loop finishes without raising an Error, we succeeded!
                 message_placeholder.markdown(f"**[{provider_name}]**\n\n" + full_response)
                 st.session_state.messages.append({"role": "model", "content": f"**[{provider_name}]**\n\n" + full_response})
                 success = True
                 break # Break out of the Waterfall Router
                 
             except Exception as e:
-                err_str = str(e).lower()
-                # If the provider is rate limited, exhausted, or down, skip to the next!
-                if "429" in err_str or "exhausted" in err_str or "rate" in err_str or "500" in err_str or "503" in err_str:
-                    last_error = f"{provider_name} Overloaded: {e}"
-                    continue
-                elif "401" in err_str or "invalid" in err_str:
-                    last_error = f"{provider_name} Auth Failed: {e}"
-                    continue
-                else:
-                    last_error = f"{provider_name} Unknown Error: {e}"
-                    continue
+                # CATCH-ALL: If ANY provider fails for ANY reason (429, 401, 402, 403, etc.),
+                # we immediately move to the next one in the Waterfall sequence.
+                last_error = f"{provider_name}: {str(e)}"
+                continue
         
         if not success:
-            st.error(f"SYSTEM FAILURE: All available AI providers are currently exhausted or disconnected. \n\nLast Error: {last_error}")
+            st.error(f"SYSTEM FAILURE: All configured AI providers failed. \n\n**Common Fixes:**\n1. Get a **fresh** Gemini Key (yours was reported as leaked).\n2. Add extra free keys (Cerebras, Groq, or SambaNova) to your Streamlit Secrets for 100% uptime.\n\n*Technical Detail: {last_error}*")
             st.session_state.messages.pop() # Remove failed prompt
