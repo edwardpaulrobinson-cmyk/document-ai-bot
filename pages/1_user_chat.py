@@ -17,7 +17,6 @@ st.markdown("Engine: `Waterfall Router (Cerebras → Groq → SambaNova → Open
 KB_DIR = "knowledge_base"
 
 # Initialize ALL available clients
-@st.cache_resource
 def get_clients():
     def get_key(name):
         val = os.getenv(name)
@@ -29,38 +28,62 @@ def get_clients():
         return val
 
     clients = {}
+    health_status = {}
     
-    # 1. Cerebras (1M tokens/day free, insanely fast Llama 3.1)
+    # 1. Cerebras
     ck = get_key("CEREBRAS_API_KEY")
     if ck:
         clients["Cerebras"] = {"client": OpenAI(base_url="https://api.cerebras.ai/v1", api_key=ck), "model": "llama3.1-8b"}
+        health_status["Cerebras"] = "✅ Active"
+    else:
+        health_status["Cerebras"] = "❌ Missing"
         
-    # 2. Groq (14.4k requests/day free, insanely fast)
+    # 2. Groq
     gk = get_key("GROQ_API_KEY")
     if gk:
         clients["Groq"] = {"client": OpenAI(base_url="https://api.groq.com/openai/v1", api_key=gk), "model": "llama-3.3-70b-versatile"}
+        health_status["Groq"] = "✅ Active"
+    else:
+        health_status["Groq"] = "❌ Missing"
         
-    # 3. SambaNova (Massive free tier)
+    # 3. SambaNova
     sk = get_key("SAMBANOVA_API_KEY")
     if sk:
         clients["SambaNova"] = {"client": OpenAI(base_url="https://api.sambanova.ai/v1", api_key=sk), "model": "Meta-Llama-3.1-8B-Instruct"}
+        health_status["SambaNova"] = "✅ Active"
+    else:
+        health_status["SambaNova"] = "❌ Missing"
 
-    # 4. OpenRouter (200 requests/day free Llama 3.3)
+    # 4. OpenRouter
     ok = get_key("OPENROUTER_API_KEY")
     if ok:
         clients["OpenRouter"] = {"client": OpenAI(base_url="https://openrouter.ai/api/v1", api_key=ok), "model": "meta-llama/llama-3.3-70b-instruct:free"}
+        health_status["OpenRouter"] = "✅ Active"
+    else:
+        health_status["OpenRouter"] = "❌ Missing"
         
-    # 5. Gemini (1500 requests/day free)
+    # 5. Gemini
     gmk = get_key("GEMINI_API_KEY")
     if gmk:
         clients["Gemini"] = {"client": genai.Client(api_key=gmk), "model": "gemini-2.5-flash"}
+        health_status["Gemini"] = "✅ Active"
+    else:
+        health_status["Gemini"] = "❌ Missing"
+
+    # Display health in sidebar
+    with st.sidebar:
+        st.divider()
+        st.subheader("🛡️ API Waterfall Status")
+        for api, status in health_status.items():
+            st.write(f"**{api}:** {status}")
+        st.info("The bot will automatically skip failed or missing providers.")
 
     return clients
 
 available_clients = get_clients()
 if not available_clients:
     st.error("Admin error: No API Keys found in Streamlit Secrets.")
-    st.info("Please set at least one of: CEREBRAS_API_KEY, GROQ_API_KEY, SAMBANOVA_API_KEY, OPENROUTER_API_KEY, or GEMINI_API_KEY.")
+    st.info("Check the sidebar for status. Please add keys to Streamlit Cloud Secrets.")
     st.stop()
 
 # Helper function to get KB text
