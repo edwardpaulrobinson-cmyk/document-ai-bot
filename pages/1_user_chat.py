@@ -7,10 +7,10 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from utils import get_all_kb_text
 
-st.set_page_config(page_title="User Chat", page_icon="💬", layout="wide")
+st.set_page_config(page_title="Query Interface", layout="wide")
 
-st.title("💬 Ask the Document Bot")
-st.markdown("I am powered by **GLM-4v (via OpenRouter)**. I can answer questions based on the documents uploaded by the staff without any strict rate limits!")
+st.title("QUERY INTERFACE")
+st.markdown("Engine: `meta-llama/llama-3.3-70b-instruct` | State: **Ready**")
 
 KB_DIR = "knowledge_base"
 
