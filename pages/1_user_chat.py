@@ -33,36 +33,31 @@ if not client:
     st.error("Admin error: API Key is not set in secrets.")
     st.stop()
 
-# Helper function to upload KB files to Gemini if they haven't been already
+# Helper function to get KB files from Gemini directly
 @st.cache_data(show_spinner="Syncing knowledge base with AI...")
 def prep_knowledge_base():
-    if not os.path.exists(KB_DIR):
-        return []
-    
-    files = os.listdir(KB_DIR)
-    gemini_file_refs = []
-    
-    for filename in files:
-        filepath = os.path.join(KB_DIR, filename)
-        # Upload to Gemini Storage
-        try:
-            uploaded_doc = client.files.upload(file=filepath)
+    try:
+        # Fetch all files currently stored in this Gemini API project
+        gemini_files = list(client.files.list())
+        
+        # Wait for any docs that are still processing (usually large PDFs)
+        ready_files = []
+        for g_file in gemini_files:
+            while g_file.state.name == "PROCESSING":
+                time.sleep(2)
+                g_file = client.files.get(name=g_file.name)
             
-            # Wait for processing if PDF
-            if filepath.lower().endswith(".pdf"):
-                while uploaded_doc.state.name == "PROCESSING":
-                    time.sleep(2)
-                    uploaded_doc = client.files.get(name=uploaded_doc.name)
-                    
-            gemini_file_refs.append(uploaded_doc)
-        except APIError as e:
-            if "429" in str(e):
-                st.error("Failed to load documents: The AI is currently overloaded with requests (Rate Limit). Please tell the admin or wait 1 minute.")
-                st.stop()
-            else:
-                st.error(f"Error loading {filename}: {e}")
+            if g_file.state.name == "ACTIVE":
+                ready_files.append(g_file)
                 
-    return gemini_file_refs
+        return ready_files
+    except APIError as e:
+        if "429" in str(e):
+            st.error("Failed to load documents: The AI is currently overloaded with requests (Rate Limit). Please tell the admin or wait 1 minute.")
+            st.stop()
+        else:
+            st.error(f"Error connecting to Gemini: {e}")
+            return []
 
 # Load KB into memory
 kb_files = prep_knowledge_base()
