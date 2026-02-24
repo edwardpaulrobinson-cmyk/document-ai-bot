@@ -29,17 +29,18 @@ if not st.session_state.admin_authenticated:
 # Admin is logged in
 st.success("Authenticated as Staff.")
 
-st.subheader("1. Upload New Document")
-uploaded_file = st.file_uploader(
-    "Choose a file", type=["pdf", "png", "jpg", "jpeg", "doc", "docx"]
+st.subheader("1. Upload New Document(s)")
+uploaded_files = st.file_uploader(
+    "Choose files", type=["pdf", "png", "jpg", "jpeg", "doc", "docx"], accept_multiple_files=True
 )
 
-if uploaded_file:
-    # Save it to the knowledge base folder permanently
-    file_path = os.path.join(KB_DIR, uploaded_file.name)
-    with open(file_path, "wb") as f:
-        f.write(uploaded_file.getbuffer())
-    st.success(f"✅ Successfully added **{uploaded_file.name}** to the knowledge base!")
+if uploaded_files:
+    for uploaded_file in uploaded_files:
+        # Save it to the knowledge base folder permanently
+        file_path = os.path.join(KB_DIR, uploaded_file.name)
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.getbuffer())
+        st.success(f"✅ Successfully added **{uploaded_file.name}** to the knowledge base!")
 
 st.markdown("---")
 st.subheader("2. Current Knowledge Base")
