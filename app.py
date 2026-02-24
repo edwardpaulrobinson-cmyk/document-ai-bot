@@ -17,9 +17,17 @@ st.set_page_config(
 # Initialize Gemini Client
 @st.cache_resource
 def get_client():
+    # Try getting from environment first (local), then Streamlit secrets (cloud)
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
+        try:
+            api_key = st.secrets["GEMINI_API_KEY"]
+        except (FileNotFoundError, KeyError):
+            return None
+            
+    if not api_key:
         return None
+        
     return genai.Client(api_key=api_key)
 
 client = get_client()
@@ -28,7 +36,7 @@ st.title("🤖 Multimodal Document Chatbot")
 st.markdown("Upload a document (**PDF, PNG, JPG**) and chat with it! The AI will naturally converse about the text and images inside.")
 
 if not client:
-    st.error("Please set your GEMINI_API_KEY in the `.env` file.")
+    st.error("Please set your `GEMINI_API_KEY` in the `.env` file (local) or in **Streamlit secrets** (deployed).")
     st.info("Get a free API key from [Google AI Studio](https://aistudio.google.com/).")
     st.stop()
 
